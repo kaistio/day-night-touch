@@ -1,0 +1,77 @@
+{
+  "name": "day-night-touch",
+  "displayName": "day-night-touch",
+  "description": "Switch themes from the touchbar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "day",
+    "night",
+    "switch theme",
+    "touchbar",
+    "extra buttons",
+    "shortcuts",
+    "touch bar"
+  ],
+  "activationEvents": [
+    "onCommand:extension.night",
+    "onCommand:extension.day"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.night",
+        "title": "Night 🌘"
+      },
+      {
+        "command": "extension.day",
+        "title": "Day 🌖"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "extension.night",
+          "group": "editing"
+        },
+        {
+          "command": "extension.day",
+          "group": "editing"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "day-night-touch",
+      "properties": {
+        "themeSwitcher.night": {
+          "type": "string",
+          "default": "Visual Studio Dark",
+          "description": "Night theme"
+        },
+        "themeSwitcher.day": {
+          "type": "string",
+          "default": "Visual Studio Light",
+          "description": "Day theme"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.25",
+    "eslint": "^4.11.0",
+    "@types/node": "^8.10.25",
+    "@types/mocha": "^2.2.42"
+  }
+}
