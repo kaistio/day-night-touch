@@ -2,6 +2,7 @@
   "name": "day-night-touch",
   "displayName": "day-night-touch",
   "description": "Switch themes from the touchbar",
+  "publisher": "oliverk",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.30.0"

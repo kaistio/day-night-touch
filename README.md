@@ -6,7 +6,7 @@ Switch themes straight from the touchbar!
 
 Toggle between custom day and night themes.
 
-![touchbar](/images/touchbar.png)
+![touchbar](images/touchbar.png)
 
 ## Extension Settings
 
